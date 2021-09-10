@@ -1,0 +1,285 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width",initial-scale=1.0">
+        <title>Restaurent</title>
+        <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" >
+        <link rel="stylesheet"  href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo"><i class="fas fa-utensils"></i>LeHien</a>
+            <nav class="navbar">
+                <a href="Menu.html">Menu</a>
+                <a href="#Speciality">Reserve</a>
+                <a href="#feeback">feedback</a>
+                <a href="#">Log in</a>
+            </nav>
+        </header>
+        <div class="box-container">
+            <div class="box">
+                <span class="price">$10</span>
+                <img src="{% static 'image/hambuger.jpg' %}" alt="">
+                <h3>hambuger</h3>
+                <a id="popup-btn-hambuger" class="btn">Order now</a>
+            </div>
+            <div class="box">
+                <span class="price">$10</span>
+                <img src="{% static 'image/pizza.jpg' %}" alt="">
+                <h3>Pizza</h3>
+                <a id="popup-btn-pizza" class="btn">Order now</a>
+            </div>
+            <div class="box">
+                <span class="price">$10</span>
+                <img src="{% static 'image/bò-steak.jpg' %}" alt="">
+                <h3>Bò sốt rượu vang</h3>
+                <a id="popup-btn-bò"  class="btn">Order now</a>
+            </div>
+            <div class="box">
+                <span class="price">$10</span>
+                <img src="{% static 'image/cá-tuyết.jpg' %}" alt="">
+                <h3>Cá Tuyết Phi Lê</h3>
+                <a id="popup-btn-cá" class="btn">Order now</a>
+            </div>
+            <div class="box">
+                <span class="price">$10</span>
+                <img src="{% static 'image/chả mực.jpg' %}" alt="">
+                <h3>chả mực</h3>
+                <a id="popup-btn-chả" class="btn">Order now</a>
+            </div>
+            <div class="box">
+                <span class="price">$10</span>
+                <img src="{% static 'image/súp bào ngư.jpg' %}" alt="">
+                <h3>Súp bào ngư</h3>
+                <a href="#" class="btn">Order now</a>
+            </div>
+            <div class="box">
+                <span class="price">$10</span>
+                <img src="{% static 'image/cua.jpg' %}" alt="">
+                <h3>Cua Chiên Giòn</h3>
+                <a href="#" class="btn">Order now</a>
+            </div>
+            <div class="box">
+                <span class="price">$10</span>
+                <img src="{% static 'image/Tôm.jpg' %}" alt="">
+                <h3>Tôm rang</h3>
+                <a href="#" class="btn">Order now</a>
+            </div>
+            <div class="box">
+                <span class="price">$10</span>
+                <img src="{% static 'image/chè.jpg' %}" alt="">
+                <h3>Chè Huyết hạt sen</h3>
+                <a href="#" class="btn">Order now</a>
+            </div>
+            <div class="box">
+                <span class="price">$10</span>
+                <img src="{% static 'image/ice-cream.jpg' %}" alt="">
+                <h3>Kem</h3>
+                <a href="#" class="btn">Order now</a>
+            </div>
+        </div>
+        <div class="popup">
+            <div class="body">
+                <div class="popup-head">
+                    ADD TO CART
+                    <span class="close-btn">&times;</span>
+                </div>
+                <div class="popup-body">
+                    <div class="popup-image">
+                    <img src="{% static 'image/hambugur.png' %}">
+                    </div>
+                    <div class="popup-content">
+                        <h2> HAMBUGER </h2>
+                        <h2>Giá:&nbsp; 20000VNĐ/Bánh</h2>
+                        <div class="quantiti">
+                            <div>
+                                <span>Số lượng &nbsp; &nbsp;</span>
+                        <span>
+                            <button>-</button>
+                            <input type="number" value=1 id="textboxclass"/>
+                             <button>+</button>
+                        </span>
+                            </div>
+                        <div>
+                            <form action="">
+                                <button class="add" type="button" onclick="Sum()"><i class="fas fa-dollar-sign"></i>Tổng giá tiền</button><br>
+                            <div id="kq">VND</div>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        Them vào giỏ hàng
+                    </a>
+                </div>
+            </div>
+         </div>
+         <!-- popup pizaa-->
+         <div class="popup_1">
+            <div class="body_1">
+                <div class="popup-head_1">
+                    ADD TO CART
+                    <span class="close-btn_1">&times;</span>
+                </div>
+                <div class="popup-body_1">
+                    <div class="popup-image_1">
+                    <img src="{% static 'image/pizza.jpg' %}">
+                    </div>
+                    <div class="popup-content_1">
+                        <h2> PIZZA </h2>
+                        <h2>Giá:&nbsp; 50000VNĐ/Bánh</h2>
+                        <div class="quantiti_1">
+                            <div>
+                                <span>Số lượng &nbsp; &nbsp;</span>
+                        <span>
+                            <button>-</button>
+                            <input type="number" value=1 id="textboxclass_1"/>
+                             <button>+</button>
+                        </span>
+                            </div>
+                        <div>
+                            <form action="">
+                                <button class="add_1" type="button" onclick="Sum_1()"><i class="fas fa-dollar-sign"></i>Tổng giá tiền</button><br>
+                            <div id="kq_1">VND</div>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="footer_1">
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        Them vào giỏ hàng
+                    </a>
+                </div>
+            </div>
+         </div>
+         <!--popup bò sốt rượu van-->
+         <div class="popup_2">
+            <div class="body_2">
+                <div class="popup-head_2">
+                    ADD TO CART
+                    <span class="close-btn_2">&times;</span>
+                </div>
+                <div class="popup-body_2">
+                    <div class="popup-image_2">
+                    <img src="{% static 'image/pizza.jpg' %}">
+                    </div>
+                    <div class="popup-content_2">
+                        <h2> BÒ SỐT RƯỢU VANG </h2>
+                        <h2>Giá:&nbsp; 50000VNĐ/Phần</h2>
+                        <div class="quantiti_2">
+                            <div>
+                                <span>Số lượng &nbsp; &nbsp;</span>
+                        <span>
+                            <button>-</button>
+                            <input type="number" value=1 id="textboxclass_2"/>
+                             <button>+</button>
+                        </span>
+                            </div>
+                        <div>
+                            <form action="">
+                                <button class="add_2" type="button" onclick="Sum_2()"><i class="fas fa-dollar-sign"></i>Tổng giá tiền</button><br>
+                            <div id="kq_2">VND</div>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="footer_2">
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        Them vào giỏ hàng
+                    </a>
+                </div>
+            </div>
+         </div>
+         <!--popup cá tuyết phi lê-->
+         <div class="popup_3">
+            <div class="body_3">
+                <div class="popup-head_3">
+                    ADD TO CART
+                    <span class="close-btn_3">&times;</span>
+                </div>
+                <div class="popup-body_3">
+                    <div class="popup-image_3">
+                    <img src="{% static 'image/pizza.jpg' %}">
+                    </div>
+                    <div class="popup-content_3">
+                        <h2> CÁ TUYẾT PHI LÊ </h2>
+                        <h2>Giá:&nbsp; 50000VNĐ/Phần</h2>
+                        <div class="quantiti_3">
+                            <div>
+                                <span>Số lượng &nbsp; &nbsp;</span>
+                        <span>
+                            <button>-</button>
+                            <input type="number" value=1 id="textboxclass_3"/>
+                             <button>+</button>
+                        </span>
+                            </div>
+                        <div>
+                            <form action="">
+                                <button class="add_3" type="button" onclick="Sum_3()"><i class="fas fa-dollar-sign"></i>Tổng giá tiền</button><br>
+                            <div id="kq_3">VND</div>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="footer_3">
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        Them vào giỏ hàng
+                    </a>
+                </div>
+            </div>
+         </div>
+         <!--popup chả mực-->
+         <div class="popup_4">
+            <div class="body_4">
+                <div class="popup-head_4">
+                    ADD TO CART
+                    <span class="close-btn_4">&times;</span>
+                </div>
+                <div class="popup-body_4">
+                    <div class="popup-image_4">
+                    <img src="{% static 'image/pizza.jpg' %}">
+                    </div>
+                    <div class="popup-content_4">
+                        <h2> CHẢ MỰC </h2>
+                        <h2>Giá:&nbsp; 50000VNĐ/Phần</h2>
+                        <div class="quantiti_4">
+                            <div>
+                                <span>Số lượng &nbsp; &nbsp;</span>
+                        <span>
+                            <button>-</button>
+                            <input type="number" value=1 id="textboxclass_4"/>
+                             <button>+</button>
+                        </span>
+                            </div>
+                        <div>
+                            <form action="">
+                                <button class="add_4" type="button" onclick="Sum_4()"><i class="fas fa-dollar-sign"></i>Tổng giá tiền</button><br>
+                            <div id="kq_4">VND</div>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="footer_4">
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        Them vào giỏ hàng
+                    </a>
+                </div>
+            </div>
+         </div>
+        <script type="text/javascript" src="{% static 'script.js' %}"></script>
+    </body>
+</html>

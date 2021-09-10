@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width",initial-scale=1.0">
+        <title>Restaurent</title>
+        <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" >
+        <link rel="stylesheet"  href="{% static 'style.css' %}"/>
+    </head>
+
+    <body>
+        <header>
+            <a href="#" class="logo"><i class="fas fa-utensils"></i>LeHien</a>
+            <nav class="navbar">
+                <a href="Menu.html">Menu</a>
+                <a href="#Speciality">Reserve</a>
+                <a href="#feeback">feedback</a>
+                <a href="login">Log in</a>
+            </nav>
+        </header>
+        <div class="run"><marquee>Anh Hiên đẹp trai quá <3 </marquee></div>
+        <div class="home" id="home">
+            <div class="content">
+                <h3> Welcome to our restaurent</h3>
+            </div>
+            <div class="image">
+                <img src="{% static 'image/screen.jpg' %}"/>
+            </div>
+        </div>
+        <div class="share">
+            <a href="#" class="btn"><i class="fab fa-facebook-square"></i>Facebook</a>
+            <a href="#" class="btn"><i class="fab fa-instagram"></i>Instagram</a>
+            <a href="#" class="btn"><i class="fab fa-twitter"></i>Twitter</a>
+        </div>
+    </body>
+</html>
